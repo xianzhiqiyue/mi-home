@@ -1,0 +1,138 @@
+{
+  "recommend_swiper": [
+    {
+      "src": "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/01.png",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/02.jpg",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/03.jpg",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/04.jpg",
+      "href": "/commodity/1001"
+
+    }
+  ],
+  "recommend_inquiry": [
+    {
+      "src":
+        "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022292984819.png",
+      "href": "/commodity/1001"
+    },
+    {
+      "src":
+        "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022292372054.png",
+      "href": "/commodity/1001"
+    },
+    {
+      "src":
+        "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022291629252.png",
+      "href": "/commodity/1001"
+    },
+    {
+      "src":
+        "http://oz3tayfme.bkt.clouddn.com/show.liluo.cc/2018011022290460400.png",
+      "href": "/commodity/1001"
+    }
+  ],
+  "recommend_hotSale": [
+    {
+      "src": "/static/img/hotSale/d9470e257a855aa12474440641fd51bd!358x508.jpg",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/hotSale/c2d195ebb1128008b01f244b9fc99620!358x252.jpg",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/hotSale/e8247f4331f7999b8ac6d822fb79b688!358x252.jpg",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/hotSale/5d84f759b74932c368b8c0fae1f95bbc!720x280.jpg",
+      "href": "/commodity/1001"
+    }
+  ],
+  "recommend_flashSale": [
+    {
+      "src": "/static/img/flashSale/1.jpg",
+      "href": "/commodity/1001",
+      "purchasePrice": "$299",
+      "currentPrice": "$199"
+    },
+    {
+      "src": "/static/img/flashSale/2.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/flashSale/3.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/flashSale/4.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/flashSale/5.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/flashSale/6.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    },
+    {
+      "src": "/static/img/flashSale/7.jpg",
+      "purchasePrice": "$299",
+      "currentPrice": "$199",
+      "href": "/commodity/1001"
+    }
+  ],
+  "recommend_dailySelection": {
+    "title": "/static/img/dailySelection/title.jpg",
+    "main": [
+      {
+        "src": "/static/img/dailySelection/1.jpg",
+        "currentPrice": "$199",
+        "heading": "小米Max 2 大屏大电量",
+        "resume": "6.44'大屏，5300mAh大电量",
+        "href": "/commodity/1001"
+      },
+      {
+        "src": "/static/img/dailySelection/2.jpg",
+        "currentPrice": "$199",
+        "heading": "小米Max 2 大屏大电量",
+        "resume": "6.44'大屏，5300mAh大电量",
+        "href": "/commodity/1001"
+      },
+      {
+        "src": "/static/img/dailySelection/3.jpg",
+        "currentPrice": "$199",
+        "heading": "小米Max 2 大屏大电量",
+        "resume": "6.44'大屏，5300mAh大电量",
+        "href": "/commodity/1001"
+      },
+      {
+        "src": "/static/img/dailySelection/4.jpg",
+        "currentPrice": "$199",
+        "heading": "小米Max 2 大屏大电量",
+        "resume": "6.44'大屏，5300mAh大电量",
+        "href": "/commodity/1001"
+      }
+    ]
+  }
+}

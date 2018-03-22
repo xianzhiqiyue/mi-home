@@ -1,0 +1,40 @@
+{
+  "src": "/static/img/flashSale/1.jpg",
+  "currentPrice": "$199",
+  "heading": "小米Max 2 大屏大电量",
+  "resume":
+    "6.44''大屏 / 5300mAh 充电宝级的大电量 / 大像素相机 / 轻薄全金属  / ​4GB 大内存 / 骁龙八核处理器",
+  "salePromotions": "【小米Max 2】一件包邮",
+  "parts": "",
+  "specifications": {
+    "versions": [
+      {
+        "version": "全网通版 4GB+64GB",
+        "price": "1599元"
+      },
+      {
+        "version": "电信版 4GB+64GB",
+        "price": "1599元"
+      },
+      {
+        "version": "移动版 4GB+64GB",
+        "price": "1599元"
+      }
+    ],
+    "color": ["黑色", "白色","金色","粉色"]
+  },
+  "discription": [
+    "/static/img/discription/1.jpg",
+    "/static/img/discription/2.jpg",
+    "/static/img/discription/3.png",
+    "/static/img/discription/4.jpg"
+  ],
+  "parameter": [
+    "/static/img/parameter/1.jpg",
+    "/static/img/parameter/2.jpg",
+    "/static/img/parameter/3.jpg",
+    "/static/img/parameter/4.jpg",
+    "/static/img/parameter/5.jpg"
+  ],
+  "accident": ["/img/accident/1.jpg"]
+}

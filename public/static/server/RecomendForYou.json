@@ -1,0 +1,44 @@
+{
+    "recomendforyou": [
+        {
+          "src": "/static/img/flashSale/1.jpg",
+          "href": "/commodity/1001",
+          "heading": "小米Max 2 大屏大电量",
+          "purchasePrice": "$299",
+          "currentPrice": "$199"
+        },
+        {
+          "src": "/static/img/flashSale/2.jpg",
+          "heading": "小米Max 2 大屏大电量",
+          "currentPrice": "$199",
+          "href": "/commodity/1001"
+        },
+        {
+          "src": "/static/img/flashSale/3.jpg",
+          "heading": "小米Max 2 大屏大电量",
+          "purchasePrice": "$299",
+          "currentPrice": "$199",
+          "href": "/commodity/1001"
+        },
+        {
+          "src": "/static/img/flashSale/4.jpg",
+          "heading": "小米Max 2 大屏大电量",
+          "purchasePrice": "$299",
+          "currentPrice": "$199",
+          "href": "/commodity/1001"
+        },
+        {
+          "src": "/static/img/flashSale/5.jpg",
+          "heading": "小米Max 2 大屏大电量",
+          "purchasePrice": "$299",
+          "currentPrice": "$199",
+          "href": "/commodity/1001"
+        },
+        {
+          "src": "/static/img/flashSale/6.jpg",
+          "heading": "小米Max 2 大屏大电量",
+          "currentPrice": "$199",
+          "href": "/commodity/1001"
+        }
+      ]
+}

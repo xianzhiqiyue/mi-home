@@ -1,21 +1,28 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import Vue from "vue";
+import Router from "vue-router";
+import Home from "./views/Home.vue";
+import Phone from "./views/Phone.vue";
+import Commodity from "./views/Commodity.vue";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "Home",
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: "/phone",
+      name: "phone",
+      component: Phone
+    },
+    {
+      path: "/commodity/:id",
+      name: "Commodity",
+      component: Commodity,
+      props: true
     }
   ]
-})
+});

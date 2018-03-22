@@ -1,32 +1,76 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+      <transition :name="transitionName">
+         <router-view class="child-view"></router-view>
+      </transition> 
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      transitionName: "slide-left",
+      nowUrl: "/"
+    };
+  },
+  methods: {},
+  watch: {
+    $route(to, from) {
+      if (to.path == "/") {
+        this.transitionName = "slide-right";
+      } else {
+        this.transitionName = "slide-left";
+      }
+    }
+  }
+};
+</script>
+
+
+<style lang="scss">
+$mi-color: rgb(245, 161, 6);
+html,
+body,
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #3c3c3c;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
-#nav {
-  padding: 30px;
+
+.child-view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  margin-bottom: 0.5rem;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(30px, 0);
+  transform: translate(30px, 0);
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
 }
 </style>
