@@ -15,7 +15,8 @@ import FooterComponent from "@/components/footerComponent.vue";
 export default {
   name: "carrousel",
   data() {
-    return {};
+    return {
+    };
   },
   components: {
     RecommendComponent,
@@ -26,7 +27,9 @@ export default {
 </script>
 
 
-<style lang="scss">
-
+<style lang="scss" scope>
+.recommend {
+  margin: 0.8rem 0 0.6rem;
+}
 </style>
 

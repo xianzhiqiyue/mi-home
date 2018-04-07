@@ -65,9 +65,7 @@ a {
   color: #555;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
+
 img {
   border: none;
 }
@@ -88,7 +86,6 @@ table {
 html {
   overflow-y: scroll;
 }
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -100,3 +97,6 @@ html {
   *zoom: 1;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}

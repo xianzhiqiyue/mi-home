@@ -1,39 +1,39 @@
 <template>
   <div class="recommend">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="slide in recommend_swiper" :key="slide.id"><img :src="slide.src" alt="#"></swiper-slide>
+      <swiper-slide v-for="slide in recommend_swiper" :key="slide.id"><img v-lazy="slide.src" alt="#"></swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
     <ul class="inquiry">
-      <li v-for="slide in recommend_inquiry" :key="slide.id"><img :src="slide.src" alt="#"></li>
+      <li v-for="slide in recommend_inquiry" :key="slide.id"><img v-lazy="slide.src" alt="#"></li>
     </ul>
     <div class="hot-sale">
       <div class="hot-sale-top">
         <div class="hot-sale-left">
-         <a ><img :src="recommend_hotSale[0]" alt="#"></a>
+         <a ><img v-lazy="recommend_hotSale[0]" alt="#"></a>
          </div>
         <div class="hot-sale-right">
-          <a ><img :src="recommend_hotSale[1]" alt="#"></a>
-          <a><img :src="recommend_hotSale[2]" alt="#"></a>
+          <a ><img v-lazy="recommend_hotSale[1]" alt="#"></a>
+          <a><img v-lazy="recommend_hotSale[2]" alt="#"></a>
         </div>
       </div>
-      <a class="hot-sale-bottom" ><img :src="recommend_hotSale[3]" alt="#"></a>
+      <a class="hot-sale-bottom" ><img v-lazy="recommend_hotSale[3]" alt="#"></a>
     </div>
     <div class="flash-sale">
       <h3>小米闪购</h3>
         <ul class="flash-sale-main">
           <li v-for="flashSale in recommend_flashSale" :key="flashSale.id" @click="Redirection(flashSale.href)">
-            <img :src="flashSale.src" alt="#">
+            <img v-lazy="flashSale.src" alt="#">
             <p class="flash-sale-price"><span>{{flashSale.currentPrice}}</span><span>{{flashSale.purchasePrice}}</span>
             </p>
           </li>
         </ul> 
     </div>
     <div class="daily-selection">
-      <h3><img :src="recommend_dailySelection.title" alt=""></h3>
+      <h3><img v-lazy="recommend_dailySelection.title" alt=""></h3>
       <ul class="daily-selection-main">
           <li v-for="dailySelection in recommend_dailySelection.main" :key="dailySelection.id" @click="Redirection(dailySelection.href)">
-            <img :src="dailySelection.src" alt="#">
+            <img v-lazy="dailySelection.src" alt="#">
              <p class="daily-selection-price"><span>{{dailySelection.heading}}</span>
              <p class="daily-selection-price"><span>{{dailySelection.resume}}</span>
              <p class="daily-selection-price"><span>{{dailySelection.currentPrice}}</span>
@@ -95,8 +95,11 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 $mi-color: rgb(245, 161, 6);
+.recommend {
+  overflow: auto;
+}
 .swiper-container {
   height: 1.8rem;
   width: 100%;

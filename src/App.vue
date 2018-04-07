@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
   name: "app",
   data() {
@@ -15,7 +16,17 @@ export default {
       nowUrl: "/"
     };
   },
-  methods: {},
+  computed: {
+    ...mapState(["commodities"])
+  },
+  methods: {
+    ...mapActions(["changeCommodities"])
+  },
+  /*  created() {
+    if (this.$ls.has("commodities")) {
+      this.changeCommodities(this.$ls("commodities"));
+    }
+  }, */
   watch: {
     $route(to, from) {
       if (to.path == "/") {
@@ -49,8 +60,11 @@ body,
   touch-action: manipulation;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
 }
-
+#app::-webkit-scrollbar {
+  display: none;
+}
 
 .child-view {
   position: absolute;
@@ -58,19 +72,18 @@ body,
   top: 0;
   width: 100%;
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-  margin-bottom: 0.5rem;
 }
 
 .slide-left-enter,
 .slide-right-leave-active {
   opacity: 0;
-  -webkit-transform: translate(30px, 0);
-  transform: translate(30px, 0);
+  -webkit-transform: translate(0.3rem, 0);
+  transform: translate(0.3rem, 0);
 }
 .slide-left-leave-active,
 .slide-right-enter {
   opacity: 0;
-  -webkit-transform: translate(-30px, 0);
-  transform: translate(-30px, 0);
+  -webkit-transform: translate(-0.3rem, 0);
+  transform: translate(-0.3rem, 0);
 }
 </style>

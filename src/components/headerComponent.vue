@@ -2,8 +2,9 @@
   <div class="header">
       <section class="search">
         <span class="header-logo">MI</span>
-        <span class="header-search"><i class="iconfont icon-search-o"></i> 搜索商品名称</span>
-        <span class="hearder-login"><i class="iconfont icon-user-o"></i> </span>
+        <span class="header-search" @click="$router.push('/search')"><i class="iconfont icon-search-o"></i> 搜索商品名称</span>
+        <span v-if="user_info.state" class="hearder-login" @click="$router.push('/mine')"><i class="iconfont icon-user-o"></i> </span>
+         <span v-else class="hearder-login" @click="$router.push('/loginin')"><i class="iconfont icon-user-o"></i> </span>
       </section>
       <nav class="nav-wrap">
         <ul class="topNav">
@@ -14,12 +15,16 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "headerComponent",
   data() {
     return {
       navData: []
     };
+  },
+  computed: {
+    ...mapState(["user_info"])
   },
   methods: {
     activeChange(index) {
@@ -46,18 +51,11 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 $mi-color: rgb(245, 161, 6);
-.home {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 0.8rem;
-}
-
 .header {
   position: fixed;
-  width: 100%;
+  width: 3.6rem;
   height: 0.8rem;
   left: 0;
   top: 0;
@@ -81,9 +79,6 @@ $mi-color: rgb(245, 161, 6);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  .iconfont {
-    font-size: 0.2rem;
-  }
   padding: 0 0.05rem;
   width: 2.6rem;
   height: 0.3rem;
@@ -92,6 +87,12 @@ $mi-color: rgb(245, 161, 6);
   border-radius: 0.02rem;
   border: solid 0.01rem #ccc;
   outline: none;
+}
+.icon-search-o {
+  font-size: 0.2rem;
+}
+.icon-user-o {
+  font-size: 0.25rem;
 }
 .hearder-login {
   width: 0.4rem;
@@ -121,7 +122,7 @@ $mi-color: rgb(245, 161, 6);
 }
 .nav-active {
   color: $mi-color;
-  border-bottom: solid 2px $mi-color;
+  border-bottom: solid 0.02rem $mi-color;
 }
 </style>
 

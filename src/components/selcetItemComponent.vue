@@ -18,7 +18,7 @@
         </ul>
       </div>
       <div class="select-title">
-        <div class="img-wrap"> <img :src="commodity.src" alt="#"></div>
+        <div class="img-wrap"> <img v-lazy="commodity.src" alt="#"></div>
         <div class="select-title-main">￥<span>{{select_version.price}}</span>
         <br>
           <span>{{select_version.version}}</span></div>
@@ -48,7 +48,7 @@ export default {
   z-index: 100;
   display: flex;
   flex-direction: column-reverse;
-  padding: 20px;
+  padding: 0.2rem;
 }
 .select-title {
   display: flex;
@@ -56,13 +56,13 @@ export default {
   position: fixed;
 }
 .img-wrap {
-  width: 100px;
+  width: 1rem;
 }
 .select-title-main {
   color: $mi-color;
-  margin: 0 10px;
+  margin: 0 0.1rem;
   span:first-child {
-    font-size: 26px;
+    font-size: 0.26rem;
   }
   span:last-child {
     color: #000;

@@ -3,7 +3,7 @@
       <h3>为您推荐</h3>
       <ul class="RecommendForYou-main">
           <li v-for="item in recommend" :key="item.key" @click="Redirection(item.href)">
-              <img :src="item.src" alt="#">
+              <img v-lazy="item.src" alt="#">
               <div>{{item.heading}}</div>
               <div><span class="currentPrice">{{item.currentPrice}}</span><span class="purchasePrice" v-if="item.purchasePrice">{{item.purchasePrice}}</span></div>
           </li>
@@ -17,7 +17,7 @@ export default {
   name: "RecommendForYou",
   data() {
     return {
-      recommend: []
+      recommend: {}
     };
   },
   methods: {
@@ -32,9 +32,7 @@ export default {
     this.axios
       .get("/static/server/RecomendForYou.json")
       .then(res => {
-        res.data.recomendforyou.forEach(element => {
-          this.recommend.push(element);
-        });
+        this.recommend = res.data.recomendforyou;
       })
       .then(err => {
         console.log(err);
@@ -43,15 +41,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $mi-color: rgb(245, 161, 6);
 .RecommendForYou {
   background-color: #fff;
   h3 {
-    padding: 0 15px;
-    font-size: 14px;
-    height: 40px;
-    line-height: 40px;
+    padding: 0 0.15rem;
+    font-size: 0.14rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
   }
 }
 .RecommendForYou-main {
@@ -65,18 +63,18 @@ $mi-color: rgb(245, 161, 6);
       height: auto;
     }
     div {
-      padding: 0 15px;
-      line-height: 30px;
+      padding: 0 0.15rem;
+      line-height: 0.3rem;
     }
   }
 }
 .purchasePrice {
   text-decoration: line-through;
-  font-size: 14px;
+  font-size: 0.14rem;
   color: #aaa;
 }
 .currentPrice {
   color: $mi-color;
-  margin-right: 10px;
+  margin-right: 0.1rem;
 }
 </style>
